@@ -9,10 +9,17 @@
 <body>
 <main>
   <h1>GitHub Pages のサンプルです</h1>
+  <button onclick="search">検索</button>
 </main>
 
 <script>
 console.log('GitHub Pages Sample');
+function search() {
+  navigator.bluetooth.requestDevice({
+    acceptAllDevices: true
+  }).then(device => {
+    console.log(device)
+  })
 </script>
 </body>
 </html>
