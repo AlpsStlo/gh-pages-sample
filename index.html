@@ -15,10 +15,13 @@
 <script>
 console.log('GitHub Pages Sample');
 function search() {
+  aleart('きてます')
   navigator.bluetooth.requestDevice({
     acceptAllDevices: true
   }).then(device => {
     console.log(device)
+  }).catch(err => {
+    console.error(err)
   })
 }
 </script>
